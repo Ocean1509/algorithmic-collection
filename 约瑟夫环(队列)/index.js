@@ -1,9 +1,19 @@
 function joseph(arr) {
-    const queue = [];
-    for (let i = 0; i < arr.length; i++) {
-        if((i % 3) === 2) queue.push(arr[i])
-    }
-    if(queue.length === 1) return queue[0];
-    else return joseph(queue)
+  const queue = [];
+  for (let i = 0; i < arr.length; i++) {
+    queue.push(arr[i])
+  }
+  let j = 0
+  while(queue.length > 1) {
+    let firstE = queue.shift();
+    if(j % 3 !== 2) queue.push(firstE);
+    j++
+  }
+  return queue[0]
 }
-console.log(joseph([0,1,2,3,4,5,6,7,8,9,10]))
+
+var a = []
+for(var i =0 ;i<100;i++) {
+  a.push(i)
+}
+console.log(joseph(a))
