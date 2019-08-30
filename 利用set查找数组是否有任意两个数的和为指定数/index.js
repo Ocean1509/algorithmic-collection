@@ -15,3 +15,8 @@ function findNum(arr, num) {
 
 console.log(findNum(arr1, num))
 console.log(findNum(arr2, num))
+
+
+// 简洁版本
+const findSum = (arr, sum) =>
+  arr.some((set => n => set.has(n) || !set.add(sum - n))(new Set));
