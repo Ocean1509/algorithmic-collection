@@ -11,7 +11,7 @@ function insertSort(arr) {
         tempI = j
       }
     }
-  }
+  } 
   console.timeEnd('插入排序耗时：');
   return arr
 }
