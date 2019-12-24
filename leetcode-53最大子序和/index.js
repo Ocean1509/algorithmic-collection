@@ -3,15 +3,11 @@
  * @return {number}
  */
 var maxSubArray = function (nums) {
-  var ans = nums[0]; // 最终的结果值
-  var sum = 0; // 当前的和最大值
-  for (var i = 0; i < nums.length; i++) {
-    if(sum > 0) {
-      sum += nums[i]
-    } else {
-      sum = nums[i]
-    }
-    ans = Math.max(ans, sum)
+  let arr = [];
+  arr[0] = nums[0]
+  for (let i = 1; i < nums.length; i++) {
+    arr[i] = Math.max(arr[i - 1] + nums[i], nums[i])
   }
-  return ans
+  return Math.max.apply(null, arr)
 };
+console.log(maxSubArray([-2, 1]))
