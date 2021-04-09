@@ -1,0 +1,84 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var test = [{
+    id: 1,
+    name: 'i1'
+}, {
+    id: 2,
+    name: 'i2',
+    parentId: 1
+}, {
+    id: 4,
+    name: 'i4',
+    parentId: 3
+}, {
+    id: 3,
+    name: 'i3',
+    parentId: 2,
+}, {
+    id: 8,
+    name: 'i8',
+    parentId: 7
+}]
+
+
+var arrTree = function (arr) {
+    var map = new Map();
+    for (let i = 0; i < arr.length; i++) {
+        map.set(arr[i].parentId, arr[i])
+    }
+    var head = null;
+    for(let i = 0; i < arr.length;i++) {
+        // console.log(arr[i])
+        if(r = map.get(arr[i].id)) {
+            arr[i].next = r;
+        }
+    }
+    console.log(arr)
+    // console.log(map)
+}
+
+arrTree(test);
+// i1
+//     /
+//     i2 /
+//     i3 /
+//     i4
+
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .gg {
+            width: 30%;
+            height: 30vw;
+            background-color: red;
+        } */
+        .gg {
+            width: 30%;
+            height: 0;
+            padding-bottom: 30%;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="gg"></div>
+</body>
+</html>
