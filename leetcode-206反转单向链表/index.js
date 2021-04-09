@@ -57,3 +57,6 @@ var reverseList = function (head) {
 
 console.log(reverseList(listnodes))
 
+
+
+pre = null; current = head
